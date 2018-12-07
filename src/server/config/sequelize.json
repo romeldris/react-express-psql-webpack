@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "project",
+    "password": "project",
+    "database": "postgres",
+    "host": "localhost",
+    "port": "5435",
+    "dialect": "postgres",
+    "logging": true
+  },
+  "test": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres"
+  },
+  "production": {}
+}

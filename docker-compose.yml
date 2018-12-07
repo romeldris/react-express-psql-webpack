@@ -1,0 +1,18 @@
+web:
+  build: .
+  links:
+    - postgres
+  ports:
+    - 8080:8080
+  environment:
+    NODE_ENV: test
+    DATABASE_URL: postgres://postgres:postgres@postgres/postgres
+
+postgres:
+  image: postgres:9.6.5-alpine
+  ports:
+    - 55432:5432
+  environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres
+    POSTGRES_DB: postgres
